@@ -20,7 +20,7 @@ function Footer() {
     },
   ]
   return (
-    <footer className="bg-[#34342A]  flex justify-between items-center  padding text-white py-[25px]">
+    <footer className="bg-[#34342A] z-20 relative  flex justify-between items-center  padding text-white py-[25px]">
       <p className="inria_font text-[#D9D9D9] text-[15.313px] leading-[23.029px] tracking-[3.522px] uppercase font-[700]">
         © 2023 FIGURE8, LLC.{' '}
       </p>

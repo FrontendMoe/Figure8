@@ -13,3 +13,27 @@ body {
 .padding {
   @apply px-[50px] lg:px-[100px];
 }
+#video-container {
+  position: relative;
+
+  overflow: hidden;
+}
+#videp {
+  mask: url('./assets/mask.svg');
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  opacity: 1;
+  /* clip-path: url('./assets/mask.svg#mask0_6_3816'); */
+}
+.clippath {
+  mask: url('./assets/mask.svg');
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+#video-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
