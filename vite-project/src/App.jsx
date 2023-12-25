@@ -106,8 +106,8 @@ function App() {
           <p className="text-[] inria_font">FOUNDER & CEO </p>
         </div>
       </section>
-      <section className="-translate-y-[100px]   flex flex-col justify-center items-center min-h-screen text-white z-20 relative">
-        <div className="absolute top-0 left-0 overflow-hidden  h-full w-full">
+      <section className="-translate-y-[100px]    flex flex-col justify-center items-center min-h-screen h-fit text-white z-20 relative">
+        <div className="absolute z-0 top-0 left-0 overflow-hidden  h-full w-full">
           <div id="video-container relative  w-screen">
             <video
               loop
@@ -119,15 +119,8 @@ function App() {
             ></video>
           </div>
         </div>
-        <div className="absolute  min-w-[100vw] clippath bg-[#b8b8253d] top-0 left-0 w-full h-full"></div>
-        <div
-          style={{
-            background:
-              'linear-gradient(180deg, rgba(184, 184, 37, 0.00) 0%, #10110C 0%, rgba(56, 57, 44, 0.00) 0.01%, rgba(72, 73, 57, 0.69) 48.61%, #484939 100%) ',
-          }}
-          className="absolute pb-[100px]  min-w-[100vw] clippath  top-0 left-0 w-full h-[736.1px]"
-        ></div>
-        <div className="relative space-y-[100px] text-center">
+        <div className="absolute   min-w-[100vw] clippath bg-[#b8b8253d] top-0 left-0 w-full h-full"></div>
+        <div className="relative h-fit z-40 py-[200px]  space-y-[100px] text-center">
           <div className="max-w-[710.6px]">
             <p className="inria_font text-center text-lime-50 text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
               BECOME A MEMBER
@@ -137,7 +130,7 @@ function App() {
               opportunities at every stage of the dealmaking process.{' '}
             </p>
           </div>
-          <div className="relative flex ">
+          <div className="relative flex -[200px] ">
             {steps.map((el, index) => (
               <div className="flex flex-col px-[50px] border-l" key={index}>
                 <p>{el.name}</p>
@@ -153,8 +146,17 @@ function App() {
           </div>
         </div>
 
-        <div className="absolute  -bottom-[100px] w-full">
-          <img src={bottomMask} className="object-cover w-full" alt="" />
+        <div className="absolute bottom-0 -space-y-[5px] translate-y-[100px]">
+          <div
+            style={{
+              background:
+                'linear-gradient(0deg, #484939 0%,  rgba(72, 73, 57, 0.69) 48.61%, rgba(72, 73, 57, 0) 100%)',
+            }}
+            className="  gradient   z-40   min-w-[100vw]    left-0 w-full h-[200.1px]"
+          ></div>
+          <div className="  -bottom-[100px] w-full">
+            <img src={bottomMask} className="object-cover w-full" alt="" />
+          </div>
         </div>
       </section>
       <Footer></Footer>
