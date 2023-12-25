@@ -1,5 +1,6 @@
 import './App.css'
 import curvesBg from './assets/curvesBg.svg'
+import bgWaves from './assets/bgWaves.svg'
 import {
   blueCurves,
   curves1,
@@ -189,7 +190,18 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="min-h-screen bg-[#828366] -translate-y-[100px] pt-[100px]"></section>
+      <section className="min-h-screen  bg-[#828366] relative -translate-y-[100px] pt-[170px]">
+        <img src={bgWaves} alt="" className="absolute  w-full top-0 h-full" />
+        <div className="mx-auto space-y-[35px] relative w-full  text-center">
+          <div className="mx-auto w-fit">{curves1}</div>
+          <p className="text-white text-[27.33px] font-bold font-['Inria Sans'] uppercase leading-[43.78px] tracking-[6.29px]">
+            Which path is right for you? <br /> Take OUR 60-second assessment
+          </p>
+          <button className="bg-[#FF8400] inria_font tracking-[3.522px] font-bold text-[15.313px] rounded-[7.013px] text-white px-[35px] py-[20px]">
+            JOIN MAILING LIST
+          </button>
+        </div>
+      </section>
       <Footer></Footer>
     </div>
   )
