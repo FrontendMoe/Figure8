@@ -12,13 +12,14 @@ import {
 import Footer from './components/Footer'
 import bgVid from './assets/bgVid.mp4'
 import bottomMask from './assets/bottomMask.svg'
+import { starterCurves } from './assets/benifits'
 function App() {
   const steps = [
     {
       name: 'STARTER',
       title: 'Do-It-Yourself Support',
       price: 99,
-      curve: '',
+      curve: starterCurves,
       benifits: [
         'Self-paced Online Deal-finding Course',
         'Dealmaker Resource Library ',
@@ -29,7 +30,7 @@ function App() {
       name: 'STARTER',
       title: 'Do-It-Yourself Support',
       price: 99,
-      curve: '',
+      curve: starterCurves,
       benifits: [
         'Self-paced Online Deal-finding Course',
         'Dealmaker Resource Library ',
@@ -40,7 +41,7 @@ function App() {
       name: 'STARTER',
       title: 'Do-It-Yourself Support',
       price: 99,
-      curve: '',
+      curve: starterCurves,
       benifits: [
         'Self-paced Online Deal-finding Course',
         'Dealmaker Resource Library ',
@@ -107,13 +108,13 @@ function App() {
         </div>
       </section>
       <section className="-translate-y-[100px]    flex flex-col justify-center items-center min-h-screen h-fit text-white z-20 relative">
-        <div className="absolute z-0 top-0 left-0 overflow-hidden  h-full w-full">
-          <div id="video-container relative  w-screen">
+        <div className="absolute z-0 top-0 left-0   h-full w-full">
+          <div id="video-container relative  w-full h-full">
             <video
               loop
               autoPlay
               muted
-              className=" top-0  z-40  min-w-[100vw]"
+              className=" top-0  z-40   h-full w-full object-cover"
               src={bgVid}
               id="videp"
             ></video>
@@ -121,7 +122,7 @@ function App() {
         </div>
         <div className="absolute   min-w-[100vw] clippath bg-[#b8b8253d] top-0 left-0 w-full h-full"></div>
         <div className="relative h-fit z-40 py-[200px]  space-y-[100px] text-center">
-          <div className="max-w-[710.6px]">
+          <div className="max-w-[710.6px] mx-auto">
             <p className="inria_font text-center text-lime-50 text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
               BECOME A MEMBER
             </p>
@@ -130,12 +131,27 @@ function App() {
               opportunities at every stage of the dealmaking process.{' '}
             </p>
           </div>
-          <div className="relative flex -[200px] ">
+          <div className="relative flex -[200px] text-start">
             {steps.map((el, index) => (
-              <div className="flex flex-col px-[50px] border-l" key={index}>
-                <p>{el.name}</p>
-                <p>{el.title}</p>
-                <p>{el.price}</p>
+              <div
+                className="flex flex-col px-[50px] border-[#5D5D41]  border-l-[1px] space-y-[35px]"
+                key={index}
+              >
+                <div>
+                  <p>{el.name}</p>
+                  <p>{el.title}</p>
+                </div>
+                <div className="flex items-center space-x-[8px]">
+                  <p className=" text-white text-opacity-70 text-[39.32px] font-bold uppercase leading-[23.03px] ">
+                    {'$' + el.price}
+                  </p>
+                  <div className=" border-2 h-full"></div>
+                  <p>
+                    PER <br />
+                    MONTH
+                  </p>
+                </div>
+                <div>{el.curve}</div>
                 <div className="flex flex-col">
                   {el.benifits.map((it, index) => (
                     <p key={index}>{it}</p>
@@ -159,6 +175,7 @@ function App() {
           </div>
         </div>
       </section>
+      <section className="min-h-screen bg-[#828366] -translate-y-[100px] pt-[100px]"></section>
       <Footer></Footer>
     </div>
   )
