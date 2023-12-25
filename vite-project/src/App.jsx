@@ -114,19 +114,18 @@ function App() {
         </div>
       </section>
       <section className="-translate-y-[100px]    flex flex-col justify-center items-center min-h-screen h-fit text-white z-20 relative">
-        <div className="absolute z-0 top-0 left-0   h-full w-full">
-          <div id="video-container relative  w-full h-full">
+        <div className="absolute z-0 top-0 left-0 clippath   h-full w-full">
+          <div id="video-container relative  w-screen h-full">
             <video
               loop
               autoPlay
               muted
-              className=" top-0  z-40   h-full w-full object-cover"
+              className=" top-0  z-30   h-full w-screen filter-[#b8b8253d] "
               src={bgVid}
-              id="videp"
             ></video>
+            <div className="top-0  z-40  absolute w-screen  h-full    bg-[#b8b8253d]  w-screen "></div>
           </div>
         </div>
-        <div className="absolute   w-full clippath bg-[#b8b8253d] top-0 left-0  h-full"></div>
         <div className="relative h-fit z-40 py-[200px]  space-y-[100px] text-center">
           <div className="max-w-[710.6px] mx-auto">
             <p className="inria_font text-center text-lime-50 text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
@@ -163,7 +162,7 @@ function App() {
                   </p>
                 </div>
                 <div>{el.curve}</div>
-                <div className="flex flex-col">
+                <div className="flex flex-col max-w-[199.75px]">
                   {el.benifits.map((it, index) => (
                     <>
                       {' '}
@@ -182,7 +181,7 @@ function App() {
               background:
                 'linear-gradient(0deg, #484939 0%,  #484939 20%,  rgba(72, 73, 57, 0.69) 48.61%, rgba(72, 73, 57, 0) 100%)',
             }}
-            className="  gradient   z-40 w-screen flex-1 h-full  "
+            className="  gradient   z-40 w-full flex-1 h-full  "
           ></div>
           <div className="  w-screen">
             <img src={bottomMask} className="object-cover w-full" alt="" />
