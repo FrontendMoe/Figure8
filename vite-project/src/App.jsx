@@ -120,6 +120,7 @@ function App() {
               loop
               autoPlay
               muted
+              playsInline
               className=" top-0  z-30   h-full w-screen filter-[#b8b8253d] "
               src={bgVid}
             ></video>
