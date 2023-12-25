@@ -1,6 +1,11 @@
 import './App.css'
 import curvesBg from './assets/curvesBg.svg'
 import bgWaves from './assets/bgWaves.svg'
+import mask2 from './assets/section2Mask.svg'
+import image from './assets/image .png'
+import orangeCurveBg from './assets/orangeCurveBg.svg'
+import orangeCurveBg2 from './assets/orangeCurveBg2.svg'
+
 import {
   blueCurves,
   curves1,
@@ -190,8 +195,13 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="min-h-screen  bg-[#828366] relative -translate-y-[100px] pt-[170px]">
+      <section className="min-h-screen  z-10  relative -translate-y-[100px] pt-[170px]">
         <img src={bgWaves} alt="" className="absolute  w-full top-0 h-full" />
+        <img
+          src={mask2}
+          alt=""
+          className="absolute w-[3744.25px] h-[891.65px] flex-shrink-0 top-0 right-0 object-bottom object-cover object-right"
+        />
         <div className="mx-auto space-y-[35px] relative w-full  text-center">
           <div className="mx-auto w-fit">{curves1}</div>
           <p className="text-white text-[27.33px] font-bold font-['Inria Sans'] uppercase leading-[43.78px] tracking-[6.29px]">
@@ -200,6 +210,53 @@ function App() {
           <button className="bg-[#FF8400] inria_font tracking-[3.522px] font-bold text-[15.313px] rounded-[7.013px] text-white px-[35px] py-[20px]">
             JOIN MAILING LIST
           </button>
+        </div>
+      </section>
+      <section className="bg-[#D9D9D9] relative pb-[200px]">
+        <div className="bg-[#fff] relative space-y-[30px] flex p-[130px] flex-col items-start justify-center max-w-[755px] mx-auto rounded-full relative z-20 aspect-square -mt-[20%]">
+          <div className="space-y-[8px]">
+            <p className="text-[39.117px] tracking-[-1.565px] font-bold text-[#FF8400]">
+              Featured Blog
+            </p>
+            <p className="w-[451.35px] text-stone-700 text-[49.32px] font-extrabold font-['Inter'] leading-[47.60px]">
+              Why This Off-Market Property Deal Fell Apart
+            </p>
+          </div>
+          <div className="w-[88.40px] h-[0px] border-4 border-stone-700"></div>
+
+          <p className="w-[438.60px] text-stone-700 text-base font-semibold font-['Inter'] leading-[33.66px]">
+            Even after you’ve agreed to a price and signed a contract, it’s
+            possible for a home sale to fall apart. Data from the National
+            Association of Realtors...
+          </p>
+
+          <button className="w-[254.36px] h-[65.66px] bg-stone-700 rounded-[7.01px]">
+            <p className="text-center text-white text-base font-bold font-['Inria Sans'] uppercase leading-[23.03px] tracking-[3.52px]">
+              READ FULL BLOG
+            </p>
+          </button>
+          <div className="absolute  -bottom-[70px] z-20 right-[-70px]">
+            <img
+              src={image}
+              className="rounded-full  relative z-10  bottom-0 -right-[30px]"
+              alt=""
+            />
+            <div className="w-[301.75px] absolute bottom-[80px] h-[301.75px] -right-[40px] bg-orange-500 rounded-full" />
+
+            <div className="w-[301.75px] absolute -bottom-[70px] h-[301.75px] bg-slate-500 rounded-full" />
+          </div>
+        </div>
+        <div>
+          <img
+            src={orangeCurveBg}
+            className="absolute   top-0 left-1/2 -translate-x-1/2"
+            alt=""
+          />
+          <img
+            src={orangeCurveBg2}
+            className="absolute   top-0 left-[0px]"
+            alt=""
+          />
         </div>
       </section>
       <Footer></Footer>

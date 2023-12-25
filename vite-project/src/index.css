@@ -30,6 +30,11 @@ body {
   mask-repeat: no-repeat;
   mask-size: cover;
 }
+.clipPath2 {
+  mask: url('./assets/section2Mask.svg');
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
 #video-mask {
   position: absolute;
   top: 0;
