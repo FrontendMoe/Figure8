@@ -12,13 +12,14 @@ import {
 import Footer from './components/Footer'
 import bgVid from './assets/bgVid.mp4'
 import bottomMask from './assets/bottomMask.svg'
-import { starterCurves } from './assets/benifits'
+import { midCurve, rightCurve, starterCurves } from './assets/benifits'
 function App() {
   const steps = [
     {
       name: 'STARTER',
-      title: 'Do-It-Yourself Support',
+      title: 'Do-It-Yourself <br />Support',
       price: 99,
+      color: '#6199A8',
       curve: starterCurves,
       benifits: [
         'Self-paced Online Deal-finding Course',
@@ -27,25 +28,30 @@ function App() {
       ],
     },
     {
-      name: 'STARTER',
-      title: 'Do-It-Yourself Support',
-      price: 99,
-      curve: starterCurves,
+      name: 'Prime',
+      title: 'Group <br />Coaching',
+      price: 299,
+      curve: midCurve,
+      color: '#B8B825',
+
       benifits: [
-        'Self-paced Online Deal-finding Course',
-        'Dealmaker Resource Library ',
-        'Member Forums + Discussion Groups',
+        'Monthly workshop Conference Calls',
+        'Quarterly Goal Setting + Strategy  Sessions',
+        '1:1 Mentor Ongoing Support',
       ],
     },
     {
-      name: 'STARTER',
-      title: 'Do-It-Yourself Support',
-      price: 99,
-      curve: starterCurves,
+      name: 'ELITE',
+      title: 'Deal <br />Accelerator',
+      price: 999,
+      curve: rightCurve,
+      color: '#FF8400',
+
       benifits: [
-        'Self-paced Online Deal-finding Course',
-        'Dealmaker Resource Library ',
-        'Member Forums + Discussion Groups',
+        '1-on-1 Personalized Investor Matching',
+        'Personalized Deal Pipelines + Opportunity Analysis',
+        'Weekly Strategy Calls',
+        'VIP event access',
       ],
     },
   ]
@@ -120,7 +126,7 @@ function App() {
             ></video>
           </div>
         </div>
-        <div className="absolute   min-w-[100vw] clippath bg-[#b8b8253d] top-0 left-0 w-full h-full"></div>
+        <div className="absolute   w-full clippath bg-[#b8b8253d] top-0 left-0  h-full"></div>
         <div className="relative h-fit z-40 py-[200px]  space-y-[100px] text-center">
           <div className="max-w-[710.6px] mx-auto">
             <p className="inria_font text-center text-lime-50 text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
@@ -137,9 +143,14 @@ function App() {
                 className="flex flex-col px-[50px] border-[#5D5D41]  border-l-[1px] space-y-[35px]"
                 key={index}
               >
-                <div>
-                  <p>{el.name}</p>
-                  <p>{el.title}</p>
+                <div style={{ color: el.color }}>
+                  <p className="inria_font uppercase tracking-[6.5px] leading-[33.235px] font-[400]">
+                    {el.name}
+                  </p>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: el.title }}
+                    className=" inria_font text-[33.80px] font-bold font-['Inria Sans'] leading-[33.24px]"
+                  ></p>
                 </div>
                 <div className="flex items-center space-x-[8px]">
                   <p className=" text-white text-opacity-70 text-[39.32px] font-bold uppercase leading-[23.03px] ">
@@ -154,7 +165,10 @@ function App() {
                 <div>{el.curve}</div>
                 <div className="flex flex-col">
                   {el.benifits.map((it, index) => (
-                    <p key={index}>{it}</p>
+                    <>
+                      {' '}
+                      <p key={index}>{it}</p> <br />
+                    </>
                   ))}
                 </div>
               </div>
@@ -162,15 +176,15 @@ function App() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 -space-y-[5px] translate-y-[100px]">
+        <div className="absolute bottom-0 h-full flex flex-col -space-y-[5px] translate-y-[100px]">
           <div
             style={{
               background:
-                'linear-gradient(0deg, #484939 0%,  rgba(72, 73, 57, 0.69) 48.61%, rgba(72, 73, 57, 0) 100%)',
+                'linear-gradient(0deg, #484939 0%,  #484939 20%,  rgba(72, 73, 57, 0.69) 48.61%, rgba(72, 73, 57, 0) 100%)',
             }}
-            className="  gradient   z-40   min-w-[100vw]    left-0 w-full h-[200.1px]"
+            className="  gradient   z-40 w-screen flex-1 h-full  "
           ></div>
-          <div className="  -bottom-[100px] w-full">
+          <div className="  w-screen">
             <img src={bottomMask} className="object-cover w-full" alt="" />
           </div>
         </div>
