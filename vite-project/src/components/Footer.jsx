@@ -36,16 +36,20 @@ function Footer() {
       name: 'location',
       value: '2972 Westheimer Rd.Atlanta, Georgia 85486 ',
       icon: location,
+      link:
+        'https://www.google.com/maps/search/2972+Westheimer+Rd.Atlanta,+Georgia+85486/@33.7669293,-84.6440333,10z/data=!3m1!4b1?entry=ttu',
     },
     {
       name: 'location',
       value: 'hello@yourfigure8.com ',
       icon: email,
+      link: 'mailto:hello@yourfigure8.com',
     },
     {
       name: 'location',
       value: '404.343.5667',
       icon: phone,
+      link: 'tel:+1-404-343-5667',
     },
   ]
   return (
@@ -71,13 +75,14 @@ function Footer() {
             </p>
             <div className="space-y-[5px]">
               {links.map((el, index) => (
-                <div
+                <a
+                  href={el.link}
                   key={index}
                   className="flex justify-center lg:justify-start items-center text-[14.034px] font-[300] leading-[23.46px] text-[#D9D9D9] space-x-[10px]  lg:space-x-[23px]"
                 >
                   <div>{el.icon}</div>
                   <p>{el.value}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>
