@@ -129,7 +129,7 @@ function App() {
               className=" top-0  z-30 lg:block hidden   h-full w-screen filter-[#b8b8253d] "
               src={bgVid}
             ></video>
-            <div className="top-0  z-40  absolute w-screen  h-full    bg-[#b8b8253d]  w-screen "></div>
+            <div className="top-0  z-40  absolute  h-full    bg-[#b8b82568]  w-screen "></div>
           </div>
         </div>
         <div className="relative h-fit z-40 py-[200px] padding   space-y-[100px] text-center">
@@ -144,38 +144,41 @@ function App() {
           </div>
           <div className="relative flex space-y-[30px] lg:space-y-0 flex-col lg:flex-row -[200px] text-start">
             {steps.map((el, index) => (
-              <div
-                className="flex flex-col lg:px-[50px] text-center lg:text-start border-[#5D5D41]  lg:border-l-[1px] space-y-[35px]"
-                key={index}
-              >
-                <div style={{ color: el.color }}>
-                  <p className="inria_font uppercase tracking-[6.5px] leading-[33.235px] font-[400]">
-                    {el.name}
-                  </p>
-                  <p
-                    dangerouslySetInnerHTML={{ __html: el.title }}
-                    className=" inria_font text-[33.80px] font-bold font-['Inria Sans'] leading-[33.24px]"
-                  ></p>
+              <div key={index} className="flex items-center">
+                <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                <div className="flex flex-col lg:px-[50px] text-center lg:text-start border-[#5D5D41]   space-y-[35px]">
+                  <div style={{ color: el.color }}>
+                    <p className="inria_font uppercase tracking-[6.5px] leading-[33.235px] font-[400]">
+                      {el.name}
+                    </p>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: el.title }}
+                      className=" inria_font text-[33.80px] font-bold font-['Inria Sans'] leading-[33.24px]"
+                    ></p>
+                  </div>
+                  <div className="flex mx-auto lg:mx-0 items-center space-x-[8px]">
+                    <p className=" text-white text-opacity-70 text-[39.32px] font-bold uppercase leading-[23.03px] ">
+                      {'$' + el.price}
+                    </p>
+                    <div className=" border-2 h-full"></div>
+                    <p>
+                      PER <br />
+                      MONTH
+                    </p>
+                  </div>
+                  <div className="mx-auto lg:mx-0">{el.curve}</div>
+                  <div className="flex flex-col lg:max-w-[199.75px]">
+                    {el.benifits.map((it, index) => (
+                      <>
+                        {' '}
+                        <p key={index}>{it}</p> <br />
+                      </>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex mx-auto lg:mx-0 items-center space-x-[8px]">
-                  <p className=" text-white text-opacity-70 text-[39.32px] font-bold uppercase leading-[23.03px] ">
-                    {'$' + el.price}
-                  </p>
-                  <div className=" border-2 h-full"></div>
-                  <p>
-                    PER <br />
-                    MONTH
-                  </p>
-                </div>
-                <div className="mx-auto lg:mx-0">{el.curve}</div>
-                <div className="flex flex-col lg:max-w-[199.75px]">
-                  {el.benifits.map((it, index) => (
-                    <>
-                      {' '}
-                      <p key={index}>{it}</p> <br />
-                    </>
-                  ))}
-                </div>
+                {index === steps.length - 1 && (
+                  <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                )}
               </div>
             ))}
           </div>
@@ -196,13 +199,18 @@ function App() {
         </div>
       </section>
       <section className="min-h-screen  z-10  relative -translate-y-[100px] pt-[170px]">
-        <img src={bgWaves} alt="" className="absolute  w-full top-0 h-full" />
+        <img
+          src={bgWaves}
+          alt=""
+          className="absolute z-10  w-full top-0 h-full"
+        />
+
         <img
           src={mask2}
           alt=""
-          className="absolute w-[3744.25px] h-[891.65px] flex-shrink-0 top-0 right-0 object-bottom object-cover object-right"
+          className="absolute w-[3744.25px] h-[891.65px] flex-shrink-0 top-0 right-0 object-bottom  "
         />
-        <div className="mx-auto space-y-[35px] relative w-full  text-center">
+        <div className="mx-auto z-10 space-y-[35px] relative w-full  text-center">
           <div className="mx-auto w-fit">{curves1}</div>
           <p className="text-white text-[27.33px] font-bold font-['Inria Sans'] uppercase leading-[43.78px] tracking-[6.29px]">
             Which path is right for you? <br /> Take OUR 60-second assessment
