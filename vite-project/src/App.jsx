@@ -18,6 +18,8 @@ import Footer from './components/Footer'
 import bgVid from './assets/bgVid.mp4'
 import bottomMask from './assets/bottomMask.svg'
 import { midCurve, rightCurve, starterCurves } from './assets/benifits'
+import { useEffect } from 'react'
+import { FadeEffect, handleScroll } from './utils/FadeEffect'
 function App() {
   const steps = [
     {
@@ -60,8 +62,29 @@ function App() {
       ],
     },
   ]
+  const playAllVideos = () => {
+    const videos = document.querySelectorAll('video')
+    for (let i = 0; i < videos.length; i++) {
+      const video = videos[i]
+      video.muted = true // Force mute the video
+      video.addEventListener('ended', () => {
+        video.currentTime = 0 // Reset the video to the beginning
+        video.play() // Pause the video when it ends
+      })
+
+      video.play()
+    }
+  }
+
+  useEffect(() => {
+    playAllVideos()
+  }, [])
+  useEffect(() => {
+    handleScroll()
+  }, [])
   return (
     <div className="relative overflow-hidden">
+      <FadeEffect></FadeEffect>
       <div className="absolute overflow-hidden  top-[500px] padding z-20">
         <img src={curvesBg} alt="" className="" />
       </div>
@@ -70,6 +93,7 @@ function App() {
           loop
           autoPlay
           muted
+          playsInline
           className="absolute top-0 h-full object-cover lg:min-w-[100vw]"
           src={bgVid}
         ></video>
