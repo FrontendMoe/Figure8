@@ -4,8 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body,
+main {
   font-family: 'Inter', sans-serif;
+  margin: 0px !important;
+  padding: 0px !important;
+  box-sizing: border-box;
 }
 .inria_font {
   font-family: 'Inria Sans', sans-serif;
