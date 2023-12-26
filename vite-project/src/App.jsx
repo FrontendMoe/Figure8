@@ -73,7 +73,7 @@ function App() {
           className="absolute top-0 h-full object-cover lg:min-w-[100vw]"
           src={bgVid}
         ></video>
-        <section className="min-h-[836px]  relative space-y-[65px] text-white text-center bg-[#1d4650b5] flex flex-col items-center justify-center">
+        <section className="min-h-[836px] padding relative space-y-[65px] text-white text-center bg-[#1d4650b5] flex flex-col items-center justify-center">
           <div>
             <div className=""> {logo}</div>
             <div className=" w-fit mx-auto">{slogan}</div>
@@ -119,33 +119,33 @@ function App() {
         </div>
       </section>
       <section className="-translate-y-[100px]    flex flex-col justify-center items-center min-h-screen h-fit text-white z-20 relative">
-        <div className="absolute z-0 top-0 left-0 clippath   h-full w-full">
+        <div className="absolute lg:block hidden z-0 top-0 left-0 clippath   h-full w-full">
           <div id="video-container relative  w-screen h-full">
             <video
               loop
               autoPlay
               muted
               playsInline
-              className=" top-0  z-30   h-full w-screen filter-[#b8b8253d] "
+              className=" top-0  z-30 lg:block hidden   h-full w-screen filter-[#b8b8253d] "
               src={bgVid}
             ></video>
             <div className="top-0  z-40  absolute w-screen  h-full    bg-[#b8b8253d]  w-screen "></div>
           </div>
         </div>
-        <div className="relative h-fit z-40 py-[200px]  space-y-[100px] text-center">
-          <div className="max-w-[710.6px] mx-auto">
-            <p className="inria_font text-center text-lime-50 text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
+        <div className="relative h-fit z-40 py-[200px] padding   space-y-[100px] text-center">
+          <div className="max-w-[710.6px]  mx-auto">
+            <p className="inria_font text-center text-lime-50 text-[18px]  lg:text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
               BECOME A MEMBER
             </p>
-            <p className="w-[710.60px] text-center text-gray-200 text-base font-medium  leading-[33.40px]">
+            <p className="max-w-[710.60px] w-full text-center text-gray-200  text-[16px] lg:text-base font-medium  leading-[33.40px]">
               We meet you where you are and provide support and engagement
               opportunities at every stage of the dealmaking process.{' '}
             </p>
           </div>
-          <div className="relative flex -[200px] text-start">
+          <div className="relative flex space-y-[30px] lg:space-y-0 flex-col lg:flex-row -[200px] text-start">
             {steps.map((el, index) => (
               <div
-                className="flex flex-col px-[50px] border-[#5D5D41]  border-l-[1px] space-y-[35px]"
+                className="flex flex-col lg:px-[50px] text-center lg:text-start border-[#5D5D41]  lg:border-l-[1px] space-y-[35px]"
                 key={index}
               >
                 <div style={{ color: el.color }}>
@@ -157,7 +157,7 @@ function App() {
                     className=" inria_font text-[33.80px] font-bold font-['Inria Sans'] leading-[33.24px]"
                   ></p>
                 </div>
-                <div className="flex items-center space-x-[8px]">
+                <div className="flex mx-auto lg:mx-0 items-center space-x-[8px]">
                   <p className=" text-white text-opacity-70 text-[39.32px] font-bold uppercase leading-[23.03px] ">
                     {'$' + el.price}
                   </p>
@@ -167,8 +167,8 @@ function App() {
                     MONTH
                   </p>
                 </div>
-                <div>{el.curve}</div>
-                <div className="flex flex-col max-w-[199.75px]">
+                <div className="mx-auto lg:mx-0">{el.curve}</div>
+                <div className="flex flex-col lg:max-w-[199.75px]">
                   {el.benifits.map((it, index) => (
                     <>
                       {' '}
@@ -187,8 +187,9 @@ function App() {
               background:
                 'linear-gradient(0deg, #484939 0%,  #484939 20%,  rgba(72, 73, 57, 0.69) 48.61%, rgba(72, 73, 57, 0) 100%)',
             }}
-            className="  gradient   z-40 w-full flex-1 h-full  "
+            className="  gradient lg:block hidden   z-40 w-full flex-1 h-full  "
           ></div>
+          <div className="   lg:hidden bg-[#484939]   z-40 w-full flex-1 h-full  "></div>
           <div className="  w-screen">
             <img src={bottomMask} className="object-cover w-full" alt="" />
           </div>
