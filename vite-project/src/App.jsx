@@ -5,14 +5,13 @@ import mask2 from './assets/section2Mask.svg'
 import image from './assets/image .png'
 import orangeCurveBg from './assets/orangeCurveBg.svg'
 import orangeCurveBg2 from './assets/orangeCurveBg2.svg'
-
 import {
   blueCurves,
   curves1,
   curves2,
   goldCurves,
-  logo,
   signature,
+  logo,
   slogan,
 } from './assets/icons'
 import Footer from './components/Footer'
@@ -71,7 +70,7 @@ function App() {
           loop
           autoPlay
           muted
-          className="absolute top-0 min-w-[100vw]"
+          className="absolute top-0 h-full object-cover lg:min-w-[100vw]"
           src={bgVid}
         ></video>
         <section className="min-h-[836px]  relative space-y-[65px] text-white text-center bg-[#1d4650b5] flex flex-col items-center justify-center">
@@ -93,17 +92,17 @@ function App() {
           <div>{curves1}</div>
         </section>
       </div>
-      <section className="min-h-screen overflow-hidden flex w-full padding bg-[#F5F5F5]">
-        <div className="w-1/2 max-h-[800.15px] space-y-[20px]">
-          <div className="pl-[50px]">{blueCurves}</div>
-          <p className="text-[49.317px] leading-[45.135px] max-w-[281.35px] tracking-[-1.973px] font-[700] text-[#484939]">
+      <section className="min-h-screen pb-[150px] py-[100px] lg:py-0 overflow-hidden lg:flex-row flex-col flex w-full padding bg-[#F5F5F5]">
+        <div className="lg:w-1/2 max-h-[800.15px] lg:space-y-[20px]">
+          <div className="pl-[50px] lg:block hidden">{blueCurves}</div>
+          <p className="text-[25px] w-full  lg:text-[49.317px] lg:leading-[45.135px] lg:max-w-[281.35px] tracking-[-1.973px] font-[700] text-[#484939]">
             Our Quest to Make <span className="text-[#B8B922]">Dealmaking</span>{' '}
             Easier
           </p>
-          <div>{goldCurves}</div>
+          <div className="lg:block hidden">{goldCurves}</div>
         </div>
-        <div className="flex-1   flex flex-col items-start justify-center space-y-[25px] max-w-[373.15px]">
-          <p className="text-[#484939] font-[Inter] text-[16.583px] font-[300] leading-[33.66px] tracking-[-0.332px]">
+        <div className="flex-1   flex flex-col items-start lg:justify-center space-y-[25px] lg:max-w-[373.15px]">
+          <p className="text-[#484939] font-[Inter] text-[14px] lg:text-[16.583px] font-[300] leading-[33.66px] tracking-[-0.332px]">
             After 15 years brokering deals, we saw even seasoned investors
             wasting time chasing false starts instead of profitable projects.
             Misalignment meant clunky partnerships or limited access to
