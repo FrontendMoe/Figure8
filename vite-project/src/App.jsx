@@ -212,13 +212,13 @@ function App() {
           </button>
         </div>
       </section>
-      <section className="bg-[#D9D9D9] relative pb-[200px]">
-        <div className="bg-[#fff] relative space-y-[30px] flex p-[130px] flex-col items-start justify-center max-w-[755px] mx-auto rounded-full relative z-20 aspect-square -mt-[20%]">
+      <section className="lg:bg-[#D9D9D9] relative pb-[200px]">
+        <div className="bg-[#fff] padding relative space-y-[30px] flex lg:p-[130px] flex-col items-start justify-center max-w-[755px] mx-auto lg:rounded-full relative z-20 aspect-square lg:-mt-[20%]">
           <div className="space-y-[8px]">
-            <p className="text-[39.117px] tracking-[-1.565px] font-bold text-[#FF8400]">
+            <p className="text-[30px] lg:text-[39.117px] tracking-[-1.565px] font-bold text-[#FF8400]">
               Featured Blog
             </p>
-            <p className="w-[451.35px] text-stone-700 text-[49.32px] font-extrabold font-['Inter'] leading-[47.60px]">
+            <p className="lg:w-[451.35px] text-stone-700 text-[35px] lg:text-[49.32px] font-extrabold font-['Inter'] leading-[47.60px]">
               Why This Off-Market Property Deal Fell Apart
             </p>
           </div>
@@ -235,7 +235,7 @@ function App() {
               READ FULL BLOG
             </p>
           </button>
-          <div className="absolute  -bottom-[70px] z-20 right-[-70px]">
+          <div className="absolute lg:block hidden  -bottom-[70px] z-20 right-[-70px]">
             <img
               src={image}
               className="rounded-full  relative z-10  bottom-0 -right-[30px]"
