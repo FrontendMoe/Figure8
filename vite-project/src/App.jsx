@@ -116,8 +116,8 @@ function App() {
           <div>{curves1}</div>
         </section>
       </div>
-      <section className="min-h-screen pb-[150px] py-[100px] lg:py-0 overflow-hidden lg:flex-row flex-col flex w-full padding bg-[#F5F5F5]">
-        <div className="lg:w-1/2 max-h-[800.15px] lg:space-y-[20px]">
+      <section className="min-h-screen gap-x-[132px] pb-[150px] py-[100px] lg:py-0 overflow-hidden lg:flex-row flex-col flex w-full padding bg-[#F5F5F5]">
+        <div className=" max-h-[800.15px] lg:space-y-[20px]">
           <div className="pl-[50px] lg:block hidden">{blueCurves}</div>
           <p className="text-[25px] w-full  lg:text-[49.317px] lg:leading-[45.135px] lg:max-w-[281.35px] tracking-[-1.973px] font-[700] text-[#484939]">
             Our Quest to Make <span className="text-[#B8B922]">Dealmaking</span>{' '}
@@ -125,7 +125,7 @@ function App() {
           </p>
           <div className="lg:block hidden">{goldCurves}</div>
         </div>
-        <div className="flex-1   flex flex-col items-start lg:justify-center space-y-[25px] lg:max-w-[373.15px]">
+        <div className="flex-1 lg:pb-[100px]  flex flex-col items-start lg:justify-center space-y-[25px] lg:max-w-[373.15px]">
           <p className="text-[#484939] font-[Inter] text-[14px] lg:text-[16.583px] font-[300] leading-[33.66px] tracking-[-0.332px]">
             After 15 years brokering deals, we saw even seasoned investors
             wasting time chasing false starts instead of profitable projects.
