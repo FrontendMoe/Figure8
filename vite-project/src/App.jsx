@@ -232,7 +232,7 @@ function App() {
         <img
           src={mask2}
           alt=""
-          className="absolute w-[3744.25px] h-[891.65px] flex-shrink-0 top-0 right-0 object-bottom  "
+          className="absolute h-[100%] object-cover  lg:w-[3744.25px] lg:h-[891.65px] flex-shrink-0 top-0 right-0 object-bottom  "
         />
         <div className="mx-auto z-10 space-y-[35px] relative w-full  text-center">
           <div className="mx-auto w-fit">{curves1}</div>
@@ -245,7 +245,7 @@ function App() {
         </div>
       </section>
       <section className="lg:bg-[#D9D9D9] relative pb-[200px]">
-        <div className="bg-[#fff] padding relative space-y-[30px] flex lg:p-[130px] flex-col items-start justify-center max-w-[755px] mx-auto lg:rounded-full relative z-20 aspect-square lg:-mt-[20%]">
+        <div className="lg:bg-[#fff] padding relative space-y-[30px] flex lg:p-[130px] flex-col items-start justify-center max-w-[755px] mx-auto lg:rounded-full relative z-20 aspect-square lg:-mt-[20%]">
           <div className="space-y-[8px]">
             <p className="text-[30px] lg:text-[39.117px] tracking-[-1.565px] font-bold text-[#FF8400]">
               Featured Blog
@@ -281,7 +281,7 @@ function App() {
         <div>
           <img
             src={orangeCurveBg}
-            className="absolute   top-0 left-1/2 -translate-x-1/2"
+            className="absolute  lg:block hidden top-0 left-1/2 -translate-x-1/2"
             alt=""
           />
           <img
