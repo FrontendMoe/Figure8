@@ -62,3 +62,86 @@ button {
 button:hover {
   opacity: 90% !important;
 }
+
+/* Sliders Config & Styles */
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #c9c9c9 !important; /* Change the color of the arrows */
+  font-size: 16px !important; /* Change the size of the arrows */
+}
+
+/* Change the background color and size of the arrow container */
+.swiper-button-prev,
+.swiper-button-next {
+  /* Change the height of the arrows container */
+  border: 2px solid #c9c9c9;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  opacity: 0 !important;
+}
+.swiper-pagination-bullet {
+  background-color: hsl(0, 0%, 79%);
+  border: 2px solid #210e70;
+}
+.swiper-container {
+  overflow: visible;
+}
+.swiper-container {
+  overflow: visible !important;
+}
+.swiper-pagination {
+  align-items: center;
+  @apply sm:flex   /* set the horizontal position */ /* center the pagination horizontally */;
+}
+#About .swiper-pagination {
+  @apply sm:flex  md:justify-center;
+}
+.swiper-pagination i {
+  color: #210e70 !important;
+  border: 1px solid #210e70 !important;
+}
+/* .swiper-pagination-bullet-active {
+	background-color: #210e70;
+} */
+.Collection .swiper-pagination-bullet-active {
+  background-color: #c9c9c9;
+}
+#Carousel .swiper-button-prev,
+#Carousel .swiper-button-next {
+  opacity: 0;
+}
+#Team .swiper-pagination {
+  position: absolute;
+}
+
+/* Loader Style */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin: 8px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}

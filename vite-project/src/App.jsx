@@ -6,6 +6,20 @@ import image from './assets/image .png'
 import orangeCurveBg from './assets/orangeCurveBg.svg'
 import orangeCurveBg2 from './assets/orangeCurveBg2.svg'
 import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  EffectFade,
+} from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import 'swiper/css/effect-fade'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import {
   blueCurves,
   curves1,
   curves2,
@@ -143,20 +157,20 @@ function App() {
         </div>
       </section>
       <section className="-translate-y-[100px]    flex flex-col justify-center items-center min-h-screen h-fit text-white z-20 relative">
-        <div className="absolute lg:block hidden z-0 top-0 left-0 clippath   h-full w-full">
-          <div id="video-container relative  w-screen h-full">
+        <div className="absolute z-0 top-0 left-0 clippath   h-full w-full">
+          <div id="video-container relative    w-screen h-full">
             <video
               loop
               autoPlay
               muted
               playsInline
-              className=" top-0  z-30 lg:block hidden   h-full w-screen filter-[#b8b8253d] "
+              className=" top-0  z-30  object-cover  h-[120vh] lg:hf w-screen filter-[#b8b8253d] "
               src={bgVid}
             ></video>
             <div className="top-0  z-40  absolute  h-full    bg-[#b8b82568]  w-screen "></div>
           </div>
         </div>
-        <div className="relative h-fit z-40 py-[200px] padding   space-y-[100px] text-center">
+        <div className="relative  h-fit z-40 py-[200px] padding   space-y-[100px] text-center">
           <div className="max-w-[710.6px]  mx-auto">
             <p className="inria_font text-center text-lime-50 text-[18px]  lg:text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
               BECOME A MEMBER
@@ -166,7 +180,7 @@ function App() {
               opportunities at every stage of the dealmaking process.{' '}
             </p>
           </div>
-          <div className="relative flex space-y-[30px] lg:space-y-0 flex-col lg:flex-row -[200px] text-start">
+          <div className="relative lg:flex hidden  space-y-[30px] lg:space-y-0 flex-col lg:flex-row -[200px] text-start">
             {steps.map((el, index) => (
               <div key={index} className="flex items-center">
                 <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
@@ -206,6 +220,66 @@ function App() {
               </div>
             ))}
           </div>
+          <div id="About" className="relative z-20 lg:hidden max-w-[100vw] ">
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+              slidesPerView={1}
+              spaceBetween={64}
+              navigation={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              // Hello
+              nextButton="#banner2 .swiper-button-next2"
+              prevButton="#banner2 .swiper-button-prev2"
+              className="rounded-lg pb-10 overflow-hidden "
+              draggable
+              direction="horizontal"
+              pagination={{ clickable: true }}
+            >
+              {steps.map((el, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex max-w-[100vw] justify-center items-center">
+                    <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                    <div className="flex flex-col lg:px-[50px] text-center lg:text-start border-[#5D5D41]   space-y-[35px]">
+                      <div style={{ color: el.color }}>
+                        <p className="inria_font uppercase tracking-[6.5px] leading-[33.235px] font-[400]">
+                          {el.name}
+                        </p>
+                        <p
+                          dangerouslySetInnerHTML={{ __html: el.title }}
+                          className=" inria_font text-[33.80px] font-bold font-['Inria Sans'] leading-[33.24px]"
+                        ></p>
+                      </div>
+                      <div className="flex mx-auto lg:mx-0 items-center space-x-[8px]">
+                        <p className=" text-white text-opacity-70 text-[39.32px] font-bold uppercase leading-[23.03px] ">
+                          {'$' + el.price}
+                        </p>
+                        <div className=" border-2 h-full"></div>
+                        <p>
+                          PER <br />
+                          MONTH
+                        </p>
+                      </div>
+                      <div className="mx-auto lg:mx-0">{el.curve}</div>
+                      <div className="flex flex-col lg:max-w-[199.75px]">
+                        {el.benifits.map((it, index) => (
+                          <>
+                            {' '}
+                            <p key={index}>{it}</p> <br />
+                          </>
+                        ))}
+                      </div>
+                    </div>
+                    {index === steps.length - 1 && (
+                      <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                    )}
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
 
         <div className="absolute bottom-0 h-full flex flex-col -space-y-[5px] translate-y-[100px]">
@@ -214,7 +288,7 @@ function App() {
               background:
                 'linear-gradient(0deg, #484939 0%,  #484939 20%,  rgba(72, 73, 57, 0.69) 48.61%, rgba(72, 73, 57, 0) 100%)',
             }}
-            className="  gradient lg:block hidden   z-40 w-full flex-1 h-full  "
+            className="  gradient   z-40 w-full flex-1 h-full  "
           ></div>
           <div className="   lg:hidden bg-[#484939]   z-40 w-full flex-1 h-full  "></div>
           <div className="  w-screen">
