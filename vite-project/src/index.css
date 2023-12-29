@@ -83,7 +83,7 @@ button:hover {
 }
 .swiper-pagination-bullet {
   background-color: hsl(0, 0%, 79%);
-  border: 2px solid #210e70;
+  border: 2px solid #ffffff;
 }
 .swiper-container {
   overflow: visible;
@@ -99,8 +99,8 @@ button:hover {
   @apply sm:flex  md:justify-center;
 }
 .swiper-pagination i {
-  color: #210e70 !important;
-  border: 1px solid #210e70 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
 }
 /* .swiper-pagination-bullet-active {
 	background-color: #210e70;

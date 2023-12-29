@@ -170,12 +170,12 @@ function App() {
             <div className="top-0  z-40  absolute  h-full    bg-[#b8b82568]  w-screen "></div>
           </div>
         </div>
-        <div className="relative  h-fit z-40 py-[200px] padding   space-y-[100px] text-center">
+        <div className="relative  h-fit z-40 pt-[100px]  lg:py-[200px] padding   space-y-[100px] text-center">
           <div className="max-w-[710.6px]  mx-auto">
-            <p className="inria_font text-center text-lime-50 text-[18px]  lg:text-[22.07px] font-bold  uppercase leading-relaxed tracking-[13.24px]">
+            <p className="inria_font text-center text-lime-50 text-[18px]  lg:text-[22.07px] font-bold  uppercase leading-relaxed tracking-[7px] lg:tracking-[13.24px]">
               BECOME A MEMBER
             </p>
-            <p className="max-w-[710.60px] w-full text-center text-gray-200  text-[16px] lg:text-base font-medium  leading-[33.40px]">
+            <p className="px-[20px] lg:px-0 lg:max-w-[710.60px] w-full text-center text-gray-200  text-[16px] lg:text-base font-medium  leading-[33.40px]">
               We meet you where you are and provide support and engagement
               opportunities at every stage of the dealmaking process.{' '}
             </p>
