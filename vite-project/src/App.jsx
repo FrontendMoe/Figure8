@@ -330,7 +330,7 @@ function App() {
           </div>
           <div className="w-[88.40px] h-[0px] border-4 border-stone-700"></div>
 
-          <p className="w-[438.60px] text-stone-700 text-base font-semibold font-['Inter'] leading-[33.66px]">
+          <p className="lg:w-[438.60px] text-stone-700 text-base font-semibold font-['Inter'] leading-[33.66px]">
             Even after you’ve agreed to a price and signed a contract, it’s
             possible for a home sale to fall apart. Data from the National
             Association of Realtors...
