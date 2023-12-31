@@ -30,6 +30,7 @@ import {
 } from './assets/icons'
 import Footer from './components/Footer'
 import bgVid from './assets/bgVid.mp4'
+import bgVid2 from './assets/bgVid2.mp4'
 import bottomMask from './assets/bottomMask.svg'
 import { midCurve, rightCurve, starterCurves } from './assets/benifits'
 import { useEffect } from 'react'
@@ -165,7 +166,7 @@ function App() {
               muted
               playsInline
               className=" top-0  z-30  object-cover  h-[120vh] lg:hf w-screen filter-[#b8b8253d] "
-              src={bgVid}
+              src={bgVid2}
             ></video>
             <div className="top-0  z-40  absolute  h-full    bg-[#b8b82568]  w-screen "></div>
           </div>
