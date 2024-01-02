@@ -5,6 +5,7 @@ import mask2 from './assets/section2Mask.svg'
 import image from './assets/image .png'
 import orangeCurveBg from './assets/orangeCurveBg.svg'
 import orangeCurveBg2 from './assets/orangeCurveBg2.svg'
+import animation from './assets/logo-f8-animation.gif'
 import {
   Navigation,
   Pagination,
@@ -114,8 +115,9 @@ function App() {
         ></video>
         <section className="min-h-[836px] padding relative space-y-[65px] text-white text-center bg-[#1d4650b5] flex flex-col items-center justify-center">
           <div>
-            <div className=""> {logo}</div>
-            <div className=" w-fit mx-auto">{slogan}</div>
+            <div className="">
+              <img className="w-[215.857px]" src={animation} alt="" />
+            </div>
           </div>
           <div className="space-y-[15px]">
             <p className="inria_font text-[#FFF] text-center font-[Inria Sans] text-[19.141px] leading-[28.786px] tracking-[4.402px] uppercase font-[700]">
