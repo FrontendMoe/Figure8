@@ -113,10 +113,10 @@ function App() {
           className="absolute top-0 h-full object-cover lg:min-w-[100vw]"
           src={bgVid}
         ></video>
-        <section className="min-h-[836px] padding relative space-y-[65px] text-white text-center bg-[#1d4650b5] flex flex-col items-center justify-center">
+        <section className="min-h-[836px] padding relative space-y-[30px] text-white text-center bg-[#1d4650b5] flex flex-col items-center justify-center">
           <div>
             <div className="">
-              <img className="w-[215.857px]" src={animation} alt="" />
+              <img className="w-[300.857px]" src={animation} alt="" />
             </div>
           </div>
           <div className="space-y-[15px]">
