@@ -49,6 +49,7 @@ function App() {
         'Dealmaker Resource Library ',
         'Member Forums + Discussion Groups',
       ],
+      link: 'https://jessica4934.miestro.com/admin/community/2',
     },
     {
       name: 'Prime',
@@ -62,6 +63,7 @@ function App() {
         'Quarterly Goal Setting + Strategy  Sessions',
         '1:1 Mentor Ongoing Support',
       ],
+      link: ' https://jessica4934.miestro.com/admin/community/3',
     },
     {
       name: 'ELITE',
@@ -73,9 +75,9 @@ function App() {
       benifits: [
         '1-on-1 Personalized Investor Matching',
         'Personalized Deal Pipelines + Opportunity Analysis',
-        'Weekly Strategy Calls',
-        'VIP event access',
+        'Weekly Strategy Calls & VIP event access',
       ],
+      link: ' https://jessica4934.miestro.com/community',
     },
   ]
   const playAllVideos = () => {
@@ -173,7 +175,7 @@ function App() {
             <div className="top-0  z-40  absolute  h-full    bg-[#b8b82568]  w-screen "></div>
           </div>
         </div>
-        <div className="relative  h-fit z-40 pt-[100px]  lg:py-[200px] padding   space-y-[100px] text-center">
+        <div className="relative  h-fit z-40 pt-[100px]  lg:py-[150px] padding   space-y-[100px] text-center">
           <div className="max-w-[710.6px]  mx-auto">
             <p className="inria_font text-center text-lime-50 text-[18px]  lg:text-[22.07px] font-bold  uppercase leading-relaxed tracking-[7px] lg:tracking-[13.24px]">
               BECOME A MEMBER
@@ -215,6 +217,17 @@ function App() {
                         <p key={index}>{it}</p> <br />
                       </>
                     ))}
+                  </div>
+                  <div
+                    style={{ backgroundColor: el.color }}
+                    className={`w-[199px] h-[47px] flex items-center  rounded-[7.01px]`}
+                  >
+                    <div
+                      onClick={() => window.open(el.link, '_blank')}
+                      className="w-48  text-center flex justify-center items-center text-white text-base font-bold font-['Inria Sans'] uppercase leading-[23.03px] tracking-[3.68px]"
+                    >
+                      <p>GET STARTED {'>'}</p>
+                    </div>
                   </div>
                 </div>
                 {index === steps.length - 1 && (
@@ -316,8 +329,13 @@ function App() {
           <p className="text-white text-[27.33px] font-bold font-['Inria Sans'] uppercase leading-[43.78px] tracking-[6.29px]">
             Which path is right for you? <br /> Take OUR 60-second assessment
           </p>
-          <button className="bg-[#FF8400] inria_font tracking-[3.522px] font-bold text-[15.313px] rounded-[7.013px] text-white px-[35px] py-[20px]">
-            JOIN MAILING LIST
+          <button
+            onClick={() =>
+              window.open('https://form.jotform.com/233628066319056', '_blank')
+            }
+            className="bg-[#FF8400] inria_font tracking-[3.522px] font-bold text-[15.313px] rounded-[7.013px] text-white px-[35px] py-[20px]"
+          >
+            TAKE THE ASSESSMENT
           </button>
         </div>
       </section>

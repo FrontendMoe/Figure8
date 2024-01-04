@@ -45,12 +45,12 @@ function Footer() {
       icon: email,
       link: 'mailto:hello@yourfigure8.com',
     },
-    {
-      name: 'location',
-      value: '404.343.5667',
-      icon: phone,
-      link: 'tel:+1-404-343-5667',
-    },
+    // {
+    //   name: 'location',
+    //   value: '404.343.5667',
+    //   icon: phone,
+    //   link: 'tel:+1-404-343-5667',
+    // },
   ]
   return (
     <footer className="relative lg:text-start text-center -mt-[50px]  space-y-[-5px] z-40">
