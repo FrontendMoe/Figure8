@@ -357,7 +357,12 @@ function App() {
             Association of Realtors...
           </p>
 
-          <button className="w-[254.36px] h-[65.66px] bg-stone-700 rounded-[7.01px]">
+          <button
+            onClick={() =>
+              window.open(' https://beyond.godaddysites.com', '_blank')
+            }
+            className="w-[254.36px] h-[65.66px] bg-stone-700 rounded-[7.01px]"
+          >
             <p className="text-center text-white text-base font-bold font-['Inria Sans'] uppercase leading-[23.03px] tracking-[3.52px]">
               READ FULL BLOG
             </p>
