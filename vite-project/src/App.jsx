@@ -261,8 +261,14 @@ function App() {
             >
               {steps.map((el, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex max-w-[100vw] justify-center items-center">
-                    <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                  <div
+                    key={index}
+                    className="flex w-fit justify-center mx-auto items-end"
+                  >
+                    <div className="h-full flex items-center">
+                      <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                    </div>
+
                     <div className="flex flex-col lg:px-[50px] text-center lg:text-start border-[#5D5D41]   space-y-[35px]">
                       <div style={{ color: el.color }}>
                         <p className="inria_font uppercase tracking-[6.5px] leading-[33.235px] font-[400]">
@@ -283,8 +289,8 @@ function App() {
                           MONTH
                         </p>
                       </div>
-                      <div className="mx-auto lg:mx-0">{el.curve}</div>
-                      <div className="flex flex-col lg:max-w-[199.75px]">
+                      <div className="mx-auto  lg:mx-0">{el.curve}</div>
+                      <div className="flex lg:h-[250px] flex-col lg:max-w-[199.75px]">
                         {el.benifits.map((it, index) => (
                           <>
                             {' '}
@@ -292,9 +298,22 @@ function App() {
                           </>
                         ))}
                       </div>
+                      <div
+                        style={{ backgroundColor: el.color }}
+                        className={`  flex items-center  w-fit mx-auto rounded-[7.01px]`}
+                      >
+                        <div
+                          onClick={() => window.open(el.link, '_blank')}
+                          className=" py-[15px] px-[20px]  text-center flex justify-center items-center text-white text-base font-bold font-['Inria Sans'] uppercase leading-[23.03px] tracking-[3.68px]"
+                        >
+                          <p>GET STARTED {'>'}</p>
+                        </div>
+                      </div>
                     </div>
                     {index === steps.length - 1 && (
-                      <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                      <div className="h-full flex items-center">
+                        <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
+                      </div>
                     )}
                   </div>
                 </SwiperSlide>
