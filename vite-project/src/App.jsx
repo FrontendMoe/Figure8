@@ -263,7 +263,7 @@ function App() {
                 <SwiperSlide key={index}>
                   <div
                     key={index}
-                    className="flex w-fit justify-center mx-auto items-end"
+                    className="flex w-fit  px-[30px] justify-center mx-auto items-end"
                   >
                     <div className="h-full flex items-center">
                       <div className="h-[248.2px] bg-[#5D5D41] lg:block hidden w-[1.5px]"></div>
